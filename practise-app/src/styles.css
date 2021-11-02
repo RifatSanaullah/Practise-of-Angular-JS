@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+button.fc-today-button.fc-button.fc-button-primary {
+    display: none;
+}
+.fc .fc-toolbar {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.fc .fc-button-primary {
+    color: white !important;
+    color: var(--fc-button-text-color,#fff);
+    background-color: white !important;
+    background-color: var(--fc-button-bg-color, transparent) !important;
+    border-color: white !important;
+    border-color: var(--fc-button-border-color, transparent) !important;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.75em;
+    font-family: monospace !important;
+    margin: 0;
+    color: white;
+}
+
+.fc-direction-ltr .fc-toolbar>*>:not(:first-child) {
+    margin-left: 0em !important;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0em !important;
+    background-color: #3F51B5 !important;
+    padding: 29px !important;
+}
+
+.fc-direction-ltr .fc-button-group>.fc-button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    right: 102px;
+    bottom: 35px;
+}
+
+.fc-direction-ltr .fc-button-group>.fc-button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    left: 100px;
+    bottom: 35px;
+}
+
+.fc .fc-button-primary:disabled {
+    color: transparent;
+    color: var(--fc-button-text-color,#fff);
+    background-color: white !important;
+    background-color: var(--fc-button-bg-color,white)!important;
+    border-color: white !important;
+    border-color: var(--fc-button-border-color,white)!important;
+}
