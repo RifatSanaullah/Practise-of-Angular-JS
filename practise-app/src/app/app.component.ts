@@ -8,16 +8,19 @@ import { CalendarOptions } from '@fullcalendar/angular';
 })
 export class AppComponent {
   title = 'practise-app';
-
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     dateClick: this.handleDateClick.bind(this),
     events: [
-      { title: 'Doctor Jammy', date: '2021-11-02T02:30:00' },
-      { title: 'Doctor Richard', date: '2021-11-02T10:30:00' }
-    ]
+      { title: 'Doctor Jammy', date: '2021-11-02'},
+      { title: 'Doctor Richard', date: '2021-11-02' }
+    ],
+    eventClick: function(events) {
+      events.el.style.backgroundColor = '#3F51B5';
+    }
   };
   handleDateClick() {
 
   }
+  
 }
